@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- ============================================================
+       EDIT META TAGS (title + description show in search/social)
+       ============================================================ -->
+  <title>Yinfeng Zeng — PhD Researcher, University of Cambridge</title>
+  <meta name="description" content="Personal academic homepage of Yinfeng Zeng, PhD researcher at the University of Cambridge." />
+  <meta name="author" content="Yinfeng Zeng" />
+  <meta property="og:title" content="Yinfeng Zeng" />
+  <meta property="og:description" content="PhD Researcher, University of Cambridge" />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Custom cursor (auto-hidden on touch) -->
+  <div class="cursor" id="cursor" aria-hidden="true"><span class="cursor__dot"></span><span class="cursor__ring"></span><span class="cursor__label" id="cursorLabel"></span></div>
+
+  <!-- Film grain overlay -->
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- ============================ NAV ============================ -->
+  <header class="nav" id="nav">
+    <a href="#top" class="nav__brand" data-cursor="Home">YZ<span>©</span></a>
+    <div class="nav__clock mono" id="clock" aria-hidden="true">CAMBRIDGE · --:--</div>
+    <nav class="nav__links" id="navLinks">
+      <a href="#education" class="nav__link" data-cursor="View"><i>01</i> Education</a>
+      <a href="#research" class="nav__link" data-cursor="Explore"><i>02</i> Research</a>
+      <a href="#conferences" class="nav__link" data-cursor="Read"><i>03</i> Conferences</a>
+      <a href="#cv" class="nav__link" data-cursor="Scan"><i>04</i> CV</a>
+      <a href="#awards" class="nav__link" data-cursor="View"><i>05</i> Awards</a>
+      <a href="#teaching" class="nav__link" data-cursor="View"><i>06</i> Teaching</a>
+      <a href="#contact" class="nav__link" data-cursor="Say hi"><i>07</i> Contact</a>
+    </nav>
+    <button class="icon-btn" id="themeToggle" aria-label="Toggle theme" data-cursor="Theme">
+      <svg class="icon-sun" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+      <svg class="icon-moon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
+    <button class="icon-btn nav__burger" id="navBurger" aria-label="Menu">
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+  </header>
+
+  <main id="top">
+    <!-- ============================ HERO ============================ -->
+    <section class="hero" id="hero">
+      <canvas class="hero__canvas" id="flow" aria-hidden="true"></canvas>
+      <div class="hero__inner">
+        <div class="hero__text">
+          <p class="hero__eyebrow"><span class="dot"></span> PhD Student · Faculty of Economics, University of Cambridge</p>
+          <h1 class="hero__title" data-cursor="✱" data-cursor-big>
+            <span class="kin"><span>Yinfeng</span></span>
+            <span class="kin"><span class="outline">Zeng</span></span>
+          </h1>
+          <p class="hero__lead">
+            I study high-dimensional statistics, econometric theory and financial
+            econometrics, specialising in <strong>factor models</strong> — their
+            specification, interactive effects, and dynamic structure.
+          </p>
+          <a href="#education" class="hero__enter" data-cursor="Go">
+            <span>Start reading</span>
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+          </a>
+        </div>
+
+        <!-- Photo placeholder. Replace assets/profile.jpg with your headshot. -->
+        <div class="hero__photo">
+          <div class="photo" data-cursor="Hi 👋">
+            <img src="assets/profile.jpg" alt="Yinfeng Zeng" onerror="this.style.display='none';this.parentNode.classList.add('photo--empty')" />
+            <span class="photo__ph mono">YOUR<br/>PHOTO</span>
+            <span class="photo__cap mono">Yinfeng Zeng — 2026</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="marq" aria-hidden="true"><div class="marq__row" id="marqRow">
+      <span>High-dimensional Statistics</span><b>✱</b><span>Econometric Theory</span><b>✱</b><span>Financial Econometrics</span><b>✱</b><span>Factor Models</span><b>✱</b><span>Random Matrix Theory</span><b>✱</b><span>Perturbation</span><b>✱</b><span>Cambridge</span><b>✱</b>
+    </div></div>
+
+    <!-- ============================ 01 · EDUCATION ============================ -->
+    <section class="section" id="education">
+      <div class="section__head reveal">
+        <span class="section__num mono">01 — Education</span>
+        <h2 class="section__title kin"><span>Where I studied</span></h2>
+      </div>
+      <ol class="list reveal">
+        <li class="entry">
+          <span class="entry__year mono">2022–27</span>
+          <div class="entry__body">
+            <h3 class="entry__title">PhD in Economics</h3>
+            <p class="entry__meta">Faculty of Economics, University of Cambridge</p>
+            <p class="entry__desc">Supervisor: Professor Alexei Onatski · Advisor: Professor Oliver Linton.</p>
+          </div>
+          <span class="entry__side mono">Cambridge, UK</span>
+        </li>
+        <li class="entry">
+          <span class="entry__year mono">2021–22</span>
+          <div class="entry__body">
+            <h3 class="entry__title">MPhil in Finance and Economics</h3>
+            <p class="entry__meta">University of Cambridge</p>
+            <p class="entry__desc">Dissertation supervisor: Professor Oliver Linton.</p>
+          </div>
+          <span class="entry__side mono">Cambridge, UK</span>
+        </li>
+        <li class="entry">
+          <span class="entry__year mono">2018–21</span>
+          <div class="entry__body">
+            <h3 class="entry__title">BSc in Statistics, Economics and Finance</h3>
+            <p class="entry__meta">University College London (UCL)</p>
+            <p class="entry__desc">Dissertation supervisor: Dr Alex Donov.</p>
+          </div>
+          <span class="entry__side mono">London, UK</span>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ============================ 02 · RESEARCH ============================ -->
+    <section class="section" id="research">
+      <div class="section__head reveal">
+        <span class="section__num mono">02 — Research</span>
+        <h2 class="section__title kin"><span>My Research</span></h2>
+        <p class="section__note mono">working papers</p>
+      </div>
+
+      <div class="papers reveal">
+        <ol class="list">
+          <li class="entry">
+            <span class="entry__year mono">2026</span>
+            <div class="entry__body">
+              <h3 class="entry__title">Imputation as a Near-Identity Transformation: The Validity of Factor Estimation under Missing Data</h3>
+              <p class="entry__meta">Sole-authored</p>
+              <p class="entry__desc">Formalises imputation as a near-identity linear operator, characterising when PCA factor estimates from a filled panel coincide with those of the (unobserved) complete panel — and turns the condition into a feasible pre-test.</p>
+              <details class="abstract">
+                <summary data-cursor="Read">Abstract</summary>
+                <p class="abstract__body">Latent factors are routinely extracted by principal components after a panel's missing entries have been filled — with zeros, means, the EM algorithm, or a purpose-built estimator. Every such choice is a different imputation, and the applied researcher has no way to know whether it has distorted the factors that emerge. We develop a single criterion that resolves the question for all of them at once. For a given panel, the gap between the factor space recovered from the imputed data and that of the unobserved complete data is governed by one quantity: a safety ratio in which the accuracy of the fill and the amount of missingness are weighed against the strength of the weakest factor. Small values preserve the factor space; large ones do not, by a margin we quantify. The criterion is deterministic and free of any assumption on the missingness mechanism, the imputation algorithm, or the pervasiveness of the factors, asking only that the factors be detectable; the strong-factor, missing-at-random settings studied by Stock and Watson (2002), Bai and Ng (2021a), Cahan, Bai, and Ng (2023), Xiong and Pelger (2023), and Jin, Miao, and Su (2021) arise as its most favourable special case. On this foundation we prove an exact perturbation law and a central limit theorem for the loss, and construct an equivalence certificate that declares an imputation valid only on evidence, with false certification controlled at a chosen level and a feasible estimator that renders it operational. The result is a unified, mechanism-free account of when imputation preserves latent factors.</p>
+              </details>
+            </div>
+            <span class="entry__side mono">Working paper</span>
+          </li>
+          <li class="entry">
+            <span class="entry__year mono">2025</span>
+            <div class="entry__body">
+              <h3 class="entry__title">Common Dynamics in Non-Negative Panels with Many Zeros</h3>
+              <p class="entry__meta">with Ruofan Xu</p>
+              <p class="entry__desc">A score-driven dynamic factor model for non-negative panels with many zeros, using GB2 distributions with censoring and zero-augmentation; improves in-sample fit and forecasts on high-frequency trading-volume and global rainfall data.</p>
+              <details class="abstract">
+                <summary data-cursor="Read">Abstract</summary>
+                <p class="abstract__body">High-dimensional panels of non-negative time series with frequent zeros — daily rainfall across stations, intraday trading volume across assets, disease counts across regions — combine three features that standard dynamic factor models cannot accommodate together: a point mass at zero, heavy right tails, and strong cross-sectional co-movement. We propose a censored score-driven dynamic factor model that captures all three in a single, likelihood-based framework. Each series is generated by a generalised beta distribution of the second kind (GB2) that is left-shifted and censored at zero, following the univariate construction of Harvey and Ito (2020), while a small number of common latent factors drive the log-scale of every series and are updated recursively by the aggregated cross-sectional score. The construction inherits the robustness of the univariate censored score and the parsimony of a factor structure, and its one-step-ahead predictive likelihood is available in closed form, so no simulation or particle filtering is required. We then develop the asymptotic theory of the maximum likelihood estimator — left open in the univariate case by Harvey and Ito (2020) — by (i) bounding the per-series censored score derivative in closed form, (ii) deriving the filter Jacobian and two contraction conditions (a uniform sufficient condition and a feasible, empirically testable Lyapunov condition), and (iii) handling the discontinuity of the censored score at the zero boundary through a Tobit-style regime decomposition. Under explicit primitive assumptions we establish strong consistency and asymptotic normality of a penalised quasi-maximum-likelihood estimator, and we give a computationally tractable three-step estimator with one Newton refinement that attains joint-MLE efficiency. Standard errors follow from a regime-decomposed sandwich formula with a two-step variance correction.</p>
+              </details>
+            </div>
+            <span class="entry__side mono">Working paper</span>
+          </li>
+          <li class="entry">
+            <span class="entry__year mono">2025</span>
+            <div class="entry__body">
+              <h3 class="entry__title">Testing Amplifiers in Observed Factor Models</h3>
+              <p class="entry__meta">with Yiyang Zhang</p>
+              <p class="entry__desc">Introduces "amplifier" effects — where some units' idiosyncratic noise carries explanatory power for other units' factor loadings — with a test and a selection procedure; detects the energy industry as an amplifier of the profit factor in the Fama–French model.</p>
+              <details class="abstract">
+                <summary data-cursor="Read">Abstract</summary>
+                <p class="abstract__body">We introduce amplifier factor models, in which the factor loadings of non-amplifier stocks are time-varying functions of the idiosyncratic shocks of designated portfolios called amplifiers. Under a channel-wise exclusion that permits cross-amplification across groups, the amplifier coefficient at a candidate channel (a, k) is estimated by a heteroskedasticity-based instrumental-variables GMM in the spirit of Lewbel (2012), which uses only data already in the model and is consistent under cross-sectional endogeneity between non-amplifier residuals and the amplifying portfolio's innovation. Amplifier candidates are generated either by economic intuition or by a row-masked Group LASSO with selection-consistency and post-selection inference; either route produces a candidate set that is verified by two panel tests — a pervasiveness test and a prevalence test — under a convergent-normalized-spectrum aggregation theory that accommodates the strong-factor residual structure typical of equity panels. An empirical illustration on U.S. equities is sketched.</p>
+              </details>
+            </div>
+            <span class="entry__side mono">Working paper</span>
+          </li>
+          <li class="entry">
+            <span class="entry__year mono">2023</span>
+            <div class="entry__body">
+              <h3 class="entry__title">Detecting Weak Granulars in Large Panels</h3>
+              <p class="entry__meta">with Zhaocheng Zhang</p>
+              <p class="entry__desc">Generalises granular (pervasive-unit) detection to weak granulars — units affecting a large proportion of the cross-section — via sequential multiple testing on the error variance; illustrated on macroeconomic, financial, production, and supply-chain data.</p>
+              <details class="abstract">
+                <summary data-cursor="Read">Abstract</summary>
+                <p class="abstract__body">This paper extends the detection method of Kapetanios et al. (2021) for pervasive units in large panels to allow both the common factors in the factor model and the pervasive units (granulars) to be "weak" — i.e., affecting a considerably large proportion of, rather than the entire, cross section, or with the Gram matrix of the factor loadings not diverging proportionally to the cross-sectional size, N.</p>
+              </details>
+            </div>
+            <span class="entry__side mono">Working paper</span>
+          </li>
+          <li class="entry">
+            <span class="entry__year mono">2023</span>
+            <div class="entry__body">
+              <h3 class="entry__title">Factor Dipping</h3>
+              <p class="entry__meta">Sole-authored</p>
+              <p class="entry__desc">Proposes "factor dipping" to generate valid alternative PC estimates under the standard factor-model specification, with a specification test and a test for the number of transformation-stable factors; used as a measure of PC-estimation uncertainty.</p>
+              <details class="abstract">
+                <summary data-cursor="Read">Abstract</summary>
+                <p class="abstract__body">Standard principal-component (PC) factor estimation relies on a spectral gap that macroeconomic and financial panels routinely lack. This weak-factor problem, combined with the linear pre-processing transformations implicit in applied work, generates PC uncertainty that standard asymptotic intervals severely understate. We propose factor dipping: re-estimate the factors from bounded, invertible transformations of the data, then invert the transformation. Under the standard specification, the dipped and original estimates span the same space up to O<sub>p</sub>(n<sup>−2</sup>) deviations, where n is the diverging spectral gap. We turn this invariance into a specification test with a derived limiting distribution, and into a representation-sensitivity band that quantifies the misspecification-induced uncertainty weak factors inject. Applications to Stock–Watson factors, factor-augmented VAR impulse responses, three-pass risk premia, and quantile factor models show that standard intervals can mislead and downstream structural conclusions can be overturned. We recommend factor dipping as a routine diagnostic before any PC-based inference.</p>
+              </details>
+              <div class="entry__links">
+                <a href="assets/factor-dipping.pdf" target="_blank" rel="noopener" data-cursor="Read">Draft PDF ↗</a>
+              </div>
+            </div>
+            <span class="entry__side mono">Working paper</span>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============================ 03 · CONFERENCES ============================ -->
+    <section class="section" id="conferences">
+      <div class="section__head reveal">
+        <span class="section__num mono">03 — Conferences</span>
+        <h2 class="section__title kin"><span>Talks &amp; presentations</span></h2>
+        <p class="section__note mono">2025 – 2026</p>
+      </div>
+      <ol class="list reveal">
+        <li class="entry">
+          <span class="entry__year mono">2026</span>
+          <div class="entry__body">
+            <h3 class="entry__title">Intl. Symposium on Econometric Theory and Applications (SETA)</h3>
+            <p class="entry__meta">Conference presentation</p>
+            <p class="entry__desc">Presenting: <i>Factor Dipping</i></p>
+          </div>
+          <span class="entry__side mono">Tokyo, Japan</span>
+        </li>
+        <li class="entry">
+          <span class="entry__year mono">2026</span>
+          <div class="entry__body">
+            <h3 class="entry__title">Annual Society for Financial Econometrics (SoFiE) Conference</h3>
+            <p class="entry__meta">Pre-conference presentation</p>
+            <p class="entry__desc">Presenting: <i>Factor Dipping</i></p>
+          </div>
+          <span class="entry__side mono">Macau, China</span>
+        </li>
+        <li class="entry">
+          <span class="entry__year mono">2026</span>
+          <div class="entry__body">
+            <h3 class="entry__title">Machine Learning and Financial Econometrics (MLiFE)</h3>
+            <p class="entry__meta">Conference presentation</p>
+            <p class="entry__desc">Presenting: <i>Factor Dipping</i></p>
+          </div>
+          <span class="entry__side mono">Chengdu, China</span>
+        </li>
+        <li class="entry">
+          <span class="entry__year mono">2026</span>
+          <div class="entry__body">
+            <h3 class="entry__title">Asian Summer School of Econometrics and Statistics (ASSES)</h3>
+            <p class="entry__meta">Workshop presenter</p>
+            <p class="entry__desc">Presenting: <i>Factor Dipping</i></p>
+          </div>
+          <span class="entry__side mono">Beijing, China</span>
+        </li>
+        <li class="entry">
+          <span class="entry__year mono">2026</span>
+          <div class="entry__body">
+            <h3 class="entry__title">Econometrics PhD Workshop</h3>
+            <p class="entry__meta">Faculty of Economics, University of Cambridge</p>
+            <p class="entry__desc">Presenting: <i>Common Dynamics in Non-Negative Panels with Many Zeros: A Score-Driven Factor Model</i></p>
+          </div>
+          <span class="entry__side mono">Cambridge, UK</span>
+        </li>
+        <li class="entry">
+          <span class="entry__year mono">2025</span>
+          <div class="entry__body">
+            <h3 class="entry__title">Econometrics PhD Workshop</h3>
+            <p class="entry__meta">Faculty of Economics, University of Cambridge</p>
+            <p class="entry__desc">Presenting: <i>Testing Amplifiers in High-Dimensional Observed Factor Models</i></p>
+          </div>
+          <span class="entry__side mono">Cambridge, UK</span>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ============================ 04 · CV ============================ -->
+    <section class="section" id="cv">
+      <div class="section__head reveal">
+        <span class="section__num mono">04 — CV</span>
+        <h2 class="section__title kin"><span>Curriculum Vitae</span></h2>
+      </div>
+
+      <div class="cvcard reveal">
+        <div class="cvcard__text">
+          <h3 class="cvcard__title">Full academic CV</h3>
+          <p class="cvcard__sub">Education, research, teaching, awards and service — in one document.</p>
+        </div>
+        <a class="cvcard__btn" href="assets/cv.pdf" download="Yinfeng-Zeng-CV.pdf" data-cursor="Download">
+          Download PDF
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- ============================ 05 · AWARDS ============================ -->
+    <section class="section" id="awards">
+      <div class="section__head reveal">
+        <span class="section__num mono">05 — Awards</span>
+        <h2 class="section__title kin"><span>Awards &amp; honours</span></h2>
+      </div>
+      <ol class="list reveal">
+        <li class="entry">
+          <span class="entry__year mono">2026</span>
+          <div class="entry__body">
+            <h3 class="entry__title">Young Scholar Award</h3>
+            <p class="entry__meta">SETA — Symposium on Econometric Theory and Applications</p>
+          </div>
+          <span class="entry__side mono">Tokyo, Japan</span>
+        </li>
+        <li class="entry">
+          <span class="entry__year mono">2026</span>
+          <div class="entry__body">
+            <h3 class="entry__title">Best Paper Award</h3>
+            <p class="entry__meta">ASSES — Asian Summer School of Econometrics and Statistics</p>
+          </div>
+          <span class="entry__side mono">Beijing, China</span>
+        </li>
+        <!-- Add more awards as <li class="entry"> blocks. -->
+      </ol>
+    </section>
+
+    <!-- ============================ 05 · TEACHING ============================ -->
+    <section class="section" id="teaching">
+      <div class="section__head reveal">
+        <span class="section__num mono">06 — Teaching</span>
+        <h2 class="section__title kin"><span>Courses taught</span></h2>
+      </div>
+      <ol class="list reveal">
+        <li class="entry">
+          <span class="entry__year mono">2024</span>
+          <div class="entry__body">
+            <h3 class="entry__title">R300 — Advanced Econometric Theory</h3>
+            <p class="entry__meta">Class Teacher · MRes in Economics, University of Cambridge</p>
+          </div>
+          <span class="entry__side mono">Cambridge</span>
+        </li>
+        <li class="entry">
+          <span class="entry__year mono">2026</span>
+          <div class="entry__body">
+            <h3 class="entry__title">F400 — Asset Pricing</h3>
+            <p class="entry__meta">Class Teacher · MPhil in Finance and Economics, University of Cambridge</p>
+          </div>
+          <span class="entry__side mono">Cambridge</span>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ============================ 06 · CONTACT ============================ -->
+    <section class="section section--contact" id="contact">
+      <span class="section__num mono reveal">07 — Contact</span>
+      <a class="contact__big" href="mailto:yz741@cam.ac.uk" data-cursor="Email" data-cursor-big>
+        <span class="kin"><span>Let's</span></span>
+        <span class="kin"><span class="outline">talk</span></span>
+      </a>
+      <div class="contact__row reveal">
+        <p class="contact__email mono">yz741@cam.ac.uk</p>
+        <div class="contact__socials">
+          <!-- EDIT: paste your real profile URLs into each href (or delete any you don't use). -->
+          <a href="https://www.linkedin.com/in/zachary-yinfeng-zeng-0232a612a" target="_blank" rel="noopener" data-cursor="↗">LinkedIn</a>
+          <a href="https://www.econ.cam.ac.uk/people/postgraduates/yinfeng-zeng" target="_blank" rel="noopener" data-cursor="↗">Faculty page</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer mono">
+    <span>© <span id="year"></span> Yinfeng Zeng</span>
+    <span>Cambridge, UK — 52.2°N</span>
+    <a href="#top" data-cursor="Up">Back to top ↑</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
