@@ -101,6 +101,15 @@
           <span class="entry__side mono">Cambridge, UK</span>
         </li>
         <li class="entry">
+          <span class="entry__year mono">2026–27</span>
+          <div class="entry__body">
+            <h3 class="entry__title">Visiting PhD Student</h3>
+            <p class="entry__meta">School of Economics and Management, Tsinghua University</p>
+            <p class="entry__desc">Host: Professor Liangjun Su · September 2026 – May 2027.</p>
+          </div>
+          <span class="entry__side mono">Beijing, China</span>
+        </li>
+        <li class="entry">
           <span class="entry__year mono">2021–22</span>
           <div class="entry__body">
             <h3 class="entry__title">MPhil in Finance and Economics</h3>
@@ -134,12 +143,25 @@
           <li class="entry">
             <span class="entry__year mono">2026</span>
             <div class="entry__body">
-              <h3 class="entry__title">Imputation as a Near-Identity Transformation: The Validity of Factor Estimation under Missing Data</h3>
-              <p class="entry__meta">Sole-authored</p>
-              <p class="entry__desc">Formalises imputation as a near-identity linear operator, characterising when PCA factor estimates from a filled panel coincide with those of the (unobserved) complete panel — and turns the condition into a feasible pre-test.</p>
+              <h3 class="entry__title">Testing the Number of Factors with an Edge-Regression Estimator of the Tracy–Widom Scale</h3>
+              <p class="entry__meta">with Liangjun Su (Tsinghua University)</p>
+              <p class="entry__desc">A test for the number of factors that estimates the Tracy–Widom scale directly, by regressing near-edge eigenvalues on square-root-law quantiles; the studentised gap is pivotal and size-controlled, and beats the ratio test when factors are weak.</p>
               <details class="abstract">
                 <summary data-cursor="Read">Abstract</summary>
-                <p class="abstract__body">Latent factors are routinely extracted by principal components after a panel's missing entries have been filled — with zeros, means, the EM algorithm, or a purpose-built estimator. Every such choice is a different imputation, and the applied researcher has no way to know whether it has distorted the factors that emerge. We develop a single criterion that resolves the question for all of them at once. For a given panel, the gap between the factor space recovered from the imputed data and that of the unobserved complete data is governed by one quantity: a safety ratio in which the accuracy of the fill and the amount of missingness are weighed against the strength of the weakest factor. Small values preserve the factor space; large ones do not, by a margin we quantify. The criterion is deterministic and free of any assumption on the missingness mechanism, the imputation algorithm, or the pervasiveness of the factors, asking only that the factors be detectable; the strong-factor, missing-at-random settings studied by Stock and Watson (2002), Bai and Ng (2021a), Cahan, Bai, and Ng (2023), Xiong and Pelger (2023), and Jin, Miao, and Su (2021) arise as its most favourable special case. On this foundation we prove an exact perturbation law and a central limit theorem for the loss, and construct an equivalence certificate that declares an imputation valid only on evidence, with false certification controlled at a chosen level and a feasible estimator that renders it operational. The result is a unified, mechanism-free account of when imputation preserves latent factors.</p>
+                <p class="abstract__body">We propose a test for the number of factors in large approximate factor models that exploits the edge of the noise spectrum. If there are k factors, the (k + 1)th and (k + 2)th largest eigenvalues of the sample covariance matrix fluctuate as the two largest eigenvalues of the noise, so their gap has a limit determined by the Tracy–Widom law, up to an unknown scale. Onatski (2009) removes this scale by a ratio of eigenvalue gaps. Following Dörnemann and Lopes (2025), we estimate it directly instead. Exploiting the square-root decay of the noise spectral density at its edge, we propose an edge-regression estimator of the scale. Our estimator regresses the eigenvalues near the edge on the corresponding quantiles of the square-root law, and is consistent at rate T<sup>−1/2+ε</sup> under both the null and the alternative. The studentized gap has a pivotal limit, so the test controls size asymptotically, and its power tends to one. Applied sequentially, the test yields an estimator of the number of factors that overestimates it with asymptotic probability at most the level, and is consistent when the level vanishes. Our method allows factors of any divergent strength, noise that is serially or cross-sectionally correlated, and, under additional conditions, exactly tied factors. In simulations, the test has size close to the nominal level and is at least as powerful as the ratio test of Onatski (2009), much more so when a factor is weak.</p>
+              </details>
+            </div>
+            <span class="entry__side mono">Working paper</span>
+          </li>
+          <li class="entry">
+            <span class="entry__year mono">2026</span>
+            <div class="entry__body">
+              <h3 class="entry__title">Which Units Act as Factors? Testing Pervasive Units in Large Panels</h3>
+              <p class="entry__meta">with Liangjun Su (Tsinghua University) and Zhaocheng Zhang (Fudan University)</p>
+              <p class="entry__desc">Develops size-controlled inference for pervasive units — series that lie in the factor space — by partialling each unit out and testing whether exactly one factor is removed with an edge-regression test; delivers screening, a confidence set, and a point estimate for the pervasive units.</p>
+              <details class="abstract">
+                <summary data-cursor="Read">Abstract</summary>
+                <p class="abstract__body">A large panel can be driven by a few of its own members: a dominant firm, a key sector, or a traded factor that many other series follow. Such pervasive units act as observed common factors, but existing methods identify them by classification rules that provide no test with controlled size and no stated error rate. This paper develops inference for pervasive units. A unit is pervasive exactly when its series lies in the factor space. We test this by partialling the unit out of the panel and checking whether exactly one factor is removed, using an edge-regression test for the number of factors. The test has controlled size without estimating the factors, allows units and factors of any strength, and lets the cross-section grow at the same rate as the time dimension. Screening every unit gives a set that contains the pervasive units with high probability, so finding no pervasive unit becomes a conclusion at a stated level. Inverting joint tests gives a confidence set for the set of pervasive units and a point estimate. In US sectoral industrial production, no sector is pervasive. Among 196 corporate bond factors, three observed factors jointly represent the three common factors. Among 91 currencies against the dollar, the euro is the only major currency the data cannot exclude from the factor space.</p>
               </details>
             </div>
             <span class="entry__side mono">Working paper</span>
@@ -154,11 +176,14 @@
                 <summary data-cursor="Read">Abstract</summary>
                 <p class="abstract__body">High-dimensional panels of non-negative time series with frequent zeros — daily rainfall across stations, intraday trading volume across assets, disease counts across regions — combine three features that standard dynamic factor models cannot accommodate together: a point mass at zero, heavy right tails, and strong cross-sectional co-movement. We propose a censored score-driven dynamic factor model that captures all three in a single, likelihood-based framework. Each series is generated by a generalised beta distribution of the second kind (GB2) that is left-shifted and censored at zero, following the univariate construction of Harvey and Ito (2020), while a small number of common latent factors drive the log-scale of every series and are updated recursively by the aggregated cross-sectional score. The construction inherits the robustness of the univariate censored score and the parsimony of a factor structure, and its one-step-ahead predictive likelihood is available in closed form, so no simulation or particle filtering is required. We then develop the asymptotic theory of the maximum likelihood estimator — left open in the univariate case by Harvey and Ito (2020) — by (i) bounding the per-series censored score derivative in closed form, (ii) deriving the filter Jacobian and two contraction conditions (a uniform sufficient condition and a feasible, empirically testable Lyapunov condition), and (iii) handling the discontinuity of the censored score at the zero boundary through a Tobit-style regime decomposition. Under explicit primitive assumptions we establish strong consistency and asymptotic normality of a penalised quasi-maximum-likelihood estimator, and we give a computationally tractable three-step estimator with one Newton refinement that attains joint-MLE efficiency. Standard errors follow from a regime-decomposed sandwich formula with a two-step variance correction.</p>
               </details>
+              <div class="entry__links">
+                <a href="assets/common-dynamics-slides.pdf" target="_blank" rel="noopener" data-cursor="Read">Slides ↗</a>
+              </div>
             </div>
             <span class="entry__side mono">Working paper</span>
           </li>
           <li class="entry">
-            <span class="entry__year mono">2025</span>
+            <span class="entry__year mono">2024</span>
             <div class="entry__body">
               <h3 class="entry__title">Testing Amplifiers in Observed Factor Models</h3>
               <p class="entry__meta">with Yiyang Zhang</p>
@@ -166,19 +191,6 @@
               <details class="abstract">
                 <summary data-cursor="Read">Abstract</summary>
                 <p class="abstract__body">We introduce amplifier factor models, in which the factor loadings of non-amplifier stocks are time-varying functions of the idiosyncratic shocks of designated portfolios called amplifiers. Under a channel-wise exclusion that permits cross-amplification across groups, the amplifier coefficient at a candidate channel (a, k) is estimated by a heteroskedasticity-based instrumental-variables GMM in the spirit of Lewbel (2012), which uses only data already in the model and is consistent under cross-sectional endogeneity between non-amplifier residuals and the amplifying portfolio's innovation. Amplifier candidates are generated either by economic intuition or by a row-masked Group LASSO with selection-consistency and post-selection inference; either route produces a candidate set that is verified by two panel tests — a pervasiveness test and a prevalence test — under a convergent-normalized-spectrum aggregation theory that accommodates the strong-factor residual structure typical of equity panels. An empirical illustration on U.S. equities is sketched.</p>
-              </details>
-            </div>
-            <span class="entry__side mono">Working paper</span>
-          </li>
-          <li class="entry">
-            <span class="entry__year mono">2023</span>
-            <div class="entry__body">
-              <h3 class="entry__title">Detecting Weak Granulars in Large Panels</h3>
-              <p class="entry__meta">with Zhaocheng Zhang</p>
-              <p class="entry__desc">Generalises granular (pervasive-unit) detection to weak granulars — units affecting a large proportion of the cross-section — via sequential multiple testing on the error variance; illustrated on macroeconomic, financial, production, and supply-chain data.</p>
-              <details class="abstract">
-                <summary data-cursor="Read">Abstract</summary>
-                <p class="abstract__body">This paper extends the detection method of Kapetanios et al. (2021) for pervasive units in large panels to allow both the common factors in the factor model and the pervasive units (granulars) to be "weak" — i.e., affecting a considerably large proportion of, rather than the entire, cross section, or with the Gram matrix of the factor loadings not diverging proportionally to the cross-sectional size, N.</p>
               </details>
             </div>
             <span class="entry__side mono">Working paper</span>
@@ -211,6 +223,24 @@
         <p class="section__note mono">2025 – 2026</p>
       </div>
       <ol class="list reveal">
+        <li class="entry">
+          <span class="entry__year mono">2026</span>
+          <div class="entry__body">
+            <h3 class="entry__title">China Econometricians Forum</h3>
+            <p class="entry__meta">School of Statistics and Mathematics, Zhongnan University of Economics and Law</p>
+            <p class="entry__desc">Presenting: <i>Testing the Number of Factors with an Edge-Regression Estimator of the Tracy–Widom Scale</i></p>
+          </div>
+          <span class="entry__side mono">Wuhan, China</span>
+        </li>
+        <li class="entry">
+          <span class="entry__year mono">2026</span>
+          <div class="entry__body">
+            <h3 class="entry__title">Workshop, University of Chinese Academy of Sciences</h3>
+            <p class="entry__meta">Workshop presentation</p>
+            <p class="entry__desc">Presenting: <i>Common Dynamics in Non-Negative Panels with Many Zeros</i></p>
+          </div>
+          <span class="entry__side mono">Beijing, China</span>
+        </li>
         <li class="entry">
           <span class="entry__year mono">2026</span>
           <div class="entry__body">
